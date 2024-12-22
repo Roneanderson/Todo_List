@@ -4,9 +4,11 @@ import { useDispatch } from 'react-redux'
 import { Container, Form, Botao, Input } from './styles'
 import Tarefa from '../../models/Tarefas'
 import { cadastrar } from '../../store/redurcers/tarefas'
+import { useNavigate } from 'react-router-dom'
 
 const Formulário = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
   const [contato, setContato] = useState('')
@@ -15,6 +17,7 @@ const Formulário = () => {
     evento.preventDefault()
     const tarefaParaAdicionar = new Tarefa(nome, email, contato, 5)
     dispatch(cadastrar(tarefaParaAdicionar))
+    navigate('/')
   }
   return (
     <Container>
