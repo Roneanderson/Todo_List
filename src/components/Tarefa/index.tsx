@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 
 import * as S from '../../styles'
 
-import { remover, editar } from '../../store/reducers/tarefas'
+import { remover, editar } from '../../store/redurcers/tarefas'
 import TarefaClass from '../../models/Tarefas'
 
 type Props = TarefaClass
