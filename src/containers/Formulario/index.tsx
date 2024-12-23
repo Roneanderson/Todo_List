@@ -1,7 +1,7 @@
 import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { Form, Botao, Input, Label } from './styles'
+import { Form, Botao, Input, Label, H1 } from './styles'
 import Tarefa from '../../models/Tarefas'
 import { cadastrar } from '../../store/redurcers/tarefas'
 import { useNavigate } from 'react-router-dom'
@@ -22,7 +22,7 @@ const Formulário = () => {
   return (
     <div>
       <Form onSubmit={cadastrarTarefa}>
-        <h1>Formulário de Cadastro</h1>
+        <H1>Formulário de Cadastro</H1>
         <Label htmlFor="nome">Nome</Label>
         <Input
           value={nome}

@@ -36,3 +36,7 @@ export const Botao = styled.button`
     font-size: 12px;
   }
 `
+export const H1 = styled.h1`
+  border: 2px solid #6b63fff1;
+  margin-bottom: 20px;
+`

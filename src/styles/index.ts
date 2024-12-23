@@ -13,7 +13,6 @@ list-style: none
 export const Container = styled.div`
   width: 100%;
   padding: 0 40px;
-  height: 100vh;
 `
 
 export const BarraAcoes = styled.div`
@@ -22,11 +21,12 @@ export const BarraAcoes = styled.div`
 `
 export const Card = styled.div`
   background-color: #fcfcfc;
-  box-shadown: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 16px;
   display: flex;
   flex-direction: column;
   border-radius: 16px;
+  margin: 20px;
 `
 
 export const Label = styled.label`
