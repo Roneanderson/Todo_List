@@ -5,6 +5,7 @@ import { Container, Form, Botao, Input } from './styles'
 import Tarefa from '../../models/Tarefas'
 import { cadastrar } from '../../store/redurcers/tarefas'
 import { useNavigate } from 'react-router-dom'
+import { VoltarPagina } from '../BotaoPagina/styles'
 
 const Formulário = () => {
   const dispatch = useDispatch()
@@ -50,7 +51,7 @@ const Formulário = () => {
           type="number"
         />
         <Botao type="submit">Cadastrar</Botao>
-        <Botao type="submit">Voltar a pagina inicial</Botao>
+        <VoltarPagina>Voltar</VoltarPagina>
       </Form>
     </Container>
   )
