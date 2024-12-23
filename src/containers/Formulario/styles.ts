@@ -1,40 +1,38 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 100px;
-`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  padding: 30px;
-  border-radius: 10px;
-  background-color: #2e2d4e;
-  max-width: 50%;
-  width: 400px;
-  margin-bottom: 20px;
 `
-export const Botao = styled.button`
-  border-radius: 30px;
-  background-color: rgb(97, 94, 221);
-  height: 40px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  color: #fff;
+export const Label = styled.label`
+  margin-bottom: 5px;
   font-size: 14px;
+  font-weight: 500;
+  color: #555;
+`
+export const Input = styled.input`
+  border: 1px solid #aaaaaa;
+  border-radius: 8px;
+  background-color: #fff;
+  height: 36px;
+  padding: 0 10px;
+`
+
+export const Botao = styled.button`
+  margin-top: 2.5rem;
+  border: none;
+  background-color: #6c63ff;
+  padding: 0.62rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
 
   &:hover {
-    opacity: 0.8;
+    background-color: #6b63fff1;
   }
-`
 
-export const Input = styled.input`
-  border: 1px solid #48456c;
-  border-radius: 30px;
-  height: 40px;
-  background-color: 363653;
+  a {
+    font-weight: bold;
+    font-size: 12px;
+  }
 `

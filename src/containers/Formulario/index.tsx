@@ -1,11 +1,10 @@
 import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 
-import { Container, Form, Botao, Input } from './styles'
+import { Form, Botao, Input, Label } from './styles'
 import Tarefa from '../../models/Tarefas'
 import { cadastrar } from '../../store/redurcers/tarefas'
 import { useNavigate } from 'react-router-dom'
-import { VoltarPagina } from '../BotaoPagina/styles'
 
 const Formulário = () => {
   const dispatch = useDispatch()
@@ -21,10 +20,10 @@ const Formulário = () => {
     navigate('/')
   }
   return (
-    <Container>
+    <div>
       <Form onSubmit={cadastrarTarefa}>
         <h1>Formulário de Cadastro</h1>
-        <label htmlFor="nome">Nome</label>
+        <Label htmlFor="nome">Nome</Label>
         <Input
           value={nome}
           onChange={(evento) => setNome(evento.target.value)}
@@ -33,7 +32,7 @@ const Formulário = () => {
           type="text"
         />
 
-        <label htmlFor="email">email</label>
+        <Label htmlFor="email">email</Label>
         <Input
           onChange={(evento) => setEmail(evento.target.value)}
           id="email"
@@ -42,7 +41,7 @@ const Formulário = () => {
           type="email"
         />
 
-        <label htmlFor="contato">Contato</label>
+        <Label htmlFor="contato">Contato</Label>
         <Input
           onChange={(evento) => setContato(evento.target.value)}
           id="contato"
@@ -50,10 +49,16 @@ const Formulário = () => {
           value={contato}
           type="number"
         />
-        <Botao type="submit">Cadastrar</Botao>
-        <VoltarPagina>Voltar</VoltarPagina>
+        <div>
+          <Botao type="submit">
+            <a>Cadastrar</a>
+          </Botao>
+          <Botao type="button" onClick={() => navigate('/')}>
+            <a>Voltar a pagina anterior</a>
+          </Botao>
+        </div>
       </Form>
-    </Container>
+    </div>
   )
 }
 
