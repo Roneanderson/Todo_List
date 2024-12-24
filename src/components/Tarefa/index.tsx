@@ -78,11 +78,7 @@ const Tarefa = ({
             >
               Salvar
             </S.BotaSalvar>
-            <S.BotaCancelar
-              onClick={() => {
-                cancelarEdicao
-              }}
-            >
+            <S.BotaCancelar onClick={() => cancelarEdicao()}>
               Cancelar
             </S.BotaCancelar>
           </>

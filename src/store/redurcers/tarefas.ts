@@ -46,7 +46,7 @@ const tarefaSlice = createSlice({
       }
     },
     cadastrar: (state, action: PayloadAction<Tarefa>) => {
-      const tarefasJaExiste = state.itens.find(
+      const tarefasJaExiste = state.itens.findIndex(
         (tarefa) =>
           tarefa.nome.toLowerCase() === action.payload.nome.toLowerCase()
       )
