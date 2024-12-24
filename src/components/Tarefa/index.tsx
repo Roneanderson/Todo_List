@@ -56,6 +56,7 @@ const Tarefa = ({
         placeholder="Seu Email"
         onChange={(evento) => setEmail(evento.target.value)}
         value={email}
+        id="2"
         disabled={!estaEditando}
       />
 
@@ -65,6 +66,7 @@ const Tarefa = ({
         placeholder="Número de contato"
         onChange={(evento) => setContato(evento.target.value)}
         value={contato}
+        id="3"
         disabled={!estaEditando}
       />
       <S.BarraAcoes>
